@@ -6,7 +6,8 @@
 
 - link:
 #    ~/.tmux.conf: tmux.conf
-    ~/.zshrc: zshrc
+    ~/.zshrc:
+    ~/.gitconfig:
 
 - create:
     - ~/code
