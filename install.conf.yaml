@@ -7,10 +7,15 @@
 - link:
 #    ~/.tmux.conf: tmux.conf
     ~/.zshrc:
+    ~/.zprofile:
     ~/.gitconfig:
 
 - create:
     - ~/code
 
-#- shell:
-#  - [git submodule update --init --recursive, Installing submodules]
+- shell:
+    -
+      command: ./setup_homebrew
+      stdin: true
+      stdout: true
+      stderr: true
