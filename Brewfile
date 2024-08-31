@@ -24,16 +24,26 @@ brew "starship"
 brew "tmux"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Sound and music editor
+cask "ableton-live-suite@11"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
 # Chromium based browser
 cask "arc"
+# Installer and license activation for Arturia products
+cask "arturia-software-center"
 # Desktop password and login vault
 cask "bitwarden"
 cask "font-mononoki"
 # Keyboard customiser
 cask "karabiner-elements"
+# Administration tool for Native Instruments products
+cask "native-access"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Audio Effects Plugins
+cask "soundtoys"
+# Download manager for Spitfire audio libraries
+cask "spitfire-audio"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
