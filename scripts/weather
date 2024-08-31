@@ -1,0 +1,58 @@
+#!/bin/zsh
+# script for calling the min temp, max temp and description for the cities in the cities array 
+# I use a secrets file where i export my api keys and cities for safety and not leaking keys to the internet
+# you want to use this format in your secrets file:
+# # Create an array named cities with values "city1" and "city2"
+# cities=("city1" "city2")
+#
+# # Export the array as an environmental variable (quote and escape each element)
+# export CITIES_ARRAY="\"${cities[@]}\""
+#
+# # API Keys
+# export GEO_API="yourGeoCodeAPIKey"
+# export OPEN_WEATHER_API="yourOpenWeatherMap_OneCallAPIKey"
+
+
+
+# Geocoding API key
+geoApiKey=$GEO_API
+# OpenWeatherMap API key
+weatherApiKey=$OPEN_WEATHER_API
+
+
+# cities for which you want to fetch weather data
+# Initialize the cities array
+eval "cities=(\"$CITIES_ARRAY\")"
+
+# Loop through each city
+for city in "${cities[@]}"; do
+    # API request URL for gecode
+    geoUrl="https://geocode.maps.co/search?q=$city&api_key=$geoApiKey"
+
+    # Call the API and store the response JSON
+    geoResponse=$(curl -s "$geoUrl")
+
+    # Extract relevant weather information from the JSON response
+    lat=$(echo "$geoResponse" | jq -r '.[1] | .lat')
+    lon=$(echo "$geoResponse" | jq -r '.[1] | .lon')
+
+    # API request URL for OpenWeatherMap
+    weatherUrl="https://api.openweathermap.org/data/3.0/onecall?lat=$lat&lon=$lon&units=metric&exclude=current,minutely,hourly,alerts&appid=$weatherApiKey"
+
+    # Call the API and store the response JSON
+    response=$(curl -s "$weatherUrl" | jq .)
+
+    # Extract relevant weather information from the JSON response
+    tempMin=$(echo "$response" | jq -r '.daily[0].temp.min')
+    tempMax=$(echo "$response" | jq -r '.daily[0].temp.max')
+    description=$(echo "$response" | jq -r '.daily[0].weather[].description')
+
+    
+    # Print weather information in the specified format
+    echo "  - $city: $tempMin°C - $tempMax°C, $description. #weather"
+
+
+    # wait 1 second because geocode api is 1 request per second
+    sleep 1
+  done
+
