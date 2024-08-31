@@ -20,3 +20,6 @@ path=(
 "$N_PREFIX/bin"
 $path
 )
+
+# eval starship to use starship for prompt
+eval "$(starship init zsh)"
