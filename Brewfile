@@ -8,6 +8,8 @@ brew "bitwarden-cli"
 brew "cmake"
 # Distributed revision control system
 brew "git"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Pager program similar to more
 brew "less"
 # Mac App Store command-line interface
