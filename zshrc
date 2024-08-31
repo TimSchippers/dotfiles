@@ -23,3 +23,6 @@ $path
 
 # eval starship to use starship for prompt
 eval "$(starship init zsh)"
+
+# always open tmux
+if [ -z $TMUX ]; then; tmux new-session -A -s Home; fi

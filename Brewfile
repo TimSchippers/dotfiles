@@ -4,6 +4,8 @@ tap "nikitabobko/tap"
 brew "bat"
 # Secure and free password manager for all of your devices
 brew "bitwarden-cli"
+# Cross-platform make
+brew "cmake"
 # Distributed revision control system
 brew "git"
 # Pager program similar to more
@@ -16,6 +18,8 @@ brew "n"
 brew "neovim"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Terminal multiplexer
+brew "tmux"
 # UNIX shell (command interpreter)
 brew "zsh"
 # AeroSpace is an i3-like tiling window manager for macOS
