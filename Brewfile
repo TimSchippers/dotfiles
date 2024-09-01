@@ -22,12 +22,12 @@ brew "mas"
 brew "n"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Pretty, minimal and fast ZSH prompt
+brew "pure"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
-# Cross-shell prompt for astronauts
-brew "starship"
 # Terminal multiplexer
 brew "tmux"
 # UNIX shell (command interpreter)
