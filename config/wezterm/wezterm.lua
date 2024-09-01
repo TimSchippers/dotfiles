@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- appearance config
-config.color_scheme = 'nord'
+config.color_scheme = 'Gruvbox Material (Gogh)'
 
 config.font = wezterm.font 'mononoki'
 
