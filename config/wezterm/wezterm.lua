@@ -12,6 +12,12 @@ config.color_scheme = 'nord'
 config.font = wezterm.font 'mononoki'
 
 config.window_decorations = "RESIZE"
+config.window_padding = {
+  left = 2,
+  right = 2,
+  top = 2,
+  bottom = 0,
+}
 config.hide_tab_bar_if_only_one_tab = true
 
 
