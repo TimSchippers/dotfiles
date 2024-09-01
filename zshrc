@@ -46,8 +46,12 @@ path=(
 "$N_PREFIX/bin"
 $path
 "$HOME/.dotfiles/scripts"
+"$HOME/go/bin"
 )
 
+# go exports
+
+export GOPRIVATE="github.com/TimSchippers/*"
 # Sourcing
 
 source "$HOME/.dotfiles/secrets"
