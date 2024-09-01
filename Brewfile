@@ -51,12 +51,16 @@ cask "clearvpn"
 cask "font-mononoki"
 # Keyboard customiser
 cask "karabiner-elements"
+# Tool to prevent the system from going into sleep mode
+cask "keepingyouawake"
 # Administration tool for Native Instruments products
 cask "native-access"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Email client
 cask "readdle-spark"
+# Save articles to read, highlight key content, and organise notes for review
+cask "reader"
 # Collection of apps available by subscription
 cask "setapp"
 # Audio Effects Plugins
