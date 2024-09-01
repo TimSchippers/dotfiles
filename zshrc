@@ -30,6 +30,8 @@ alias lg='lazygit'
 
 alias dot="cd $HOME/.dotfiles"
 
+alias code="zed"
+
 
 ## shows the paths in a more clear way
 alias trail='<<<${(F)path}'
