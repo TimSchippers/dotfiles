@@ -20,11 +20,6 @@ SAVEHIST=10000
 setopt HIST_IGNORE_SPACE  # Don't save when prefixed with space
 setopt HIST_IGNORE_DUPS   # Don't save duplicate lines
 
-# Promt (starship)
-
-## eval starship to use starship for prompt
-eval "$(starship init zsh)"
-
 # Aliases
 alias n=nvim
 alias ls='ls -lAFh --color=auto'
@@ -58,3 +53,8 @@ source "$HOME/.dotfiles/secrets"
 # always open tmux
 if [ -z $TMUX ]; then; tmux new-session -A -s Home; fi
 
+
+# Prompt (pure)
+fpath+=($HOME/.config/pure)
+autoload -U promptinit; promptinit
+prompt pure
