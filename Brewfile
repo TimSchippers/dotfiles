@@ -10,6 +10,8 @@ brew "cmake"
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
@@ -30,6 +32,8 @@ brew "ripgrep"
 brew "speedtest-cli"
 # Terminal multiplexer
 brew "tmux"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Sound and music editor
@@ -48,6 +52,8 @@ cask "bitwarden"
 cask "cleanmymac"
 # VPN client
 cask "clearvpn"
+# Voice and text chat software
+cask "discord"
 cask "font-mononoki"
 # Keyboard customiser
 cask "karabiner-elements"
