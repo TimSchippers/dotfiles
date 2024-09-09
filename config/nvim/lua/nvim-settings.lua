@@ -30,6 +30,7 @@ vim.g.mkdp_browser = "/Applications/Arc.app/Contents/MacOS/Arc"
 
 -- ~~~~~~~~~~~~~~~~~~~~~~ KEYBINDINGS ~~~~~~~~~~~~~~~~~~~~~
 vim.keymap.set("n", "<leader>s", ":Neotree filesystem reveal left toggle<CR>")
+vim.keymap.set("n", "<leader>k", vim.cmd.Ex)
 
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<leader>fw", ":Telescope live_grep<CR>")
