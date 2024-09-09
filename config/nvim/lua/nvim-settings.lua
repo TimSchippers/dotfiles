@@ -2,6 +2,9 @@
 -- set leader to space
 vim.g.mapleader = " "
 
+-- set colors
+vim.opt.termguicolors = true
+
 -- Enable relative line numbers
 vim.opt.nu = true
 vim.opt.rnu = true
