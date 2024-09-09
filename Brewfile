@@ -62,14 +62,8 @@ cask "aerospace"
 cask "arc"
 # Installer and license activation for Arturia products
 cask "arturia-software-center"
-# Menu bar icon organiser
-cask "bartender"
 # Desktop password and login vault
 cask "bitwarden"
-# Tool to remove unnecessary files and folders from disk
-cask "cleanmymac"
-# VPN client
-cask "clearvpn"
 # Voice and text chat software
 cask "discord"
 cask "font-mononoki"
