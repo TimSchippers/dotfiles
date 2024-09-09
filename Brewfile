@@ -1,5 +1,7 @@
 tap "homebrew/bundle"
 tap "nikitabobko/tap"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Secure and free password manager for all of your devices
@@ -18,6 +20,8 @@ brew "jq"
 brew "lazygit"
 # Pager program similar to more
 brew "less"
+# Portable Foreign Function Interface library
+brew "libffi"
 # Mac App Store command-line interface
 brew "mas"
 # Node version management
@@ -26,14 +30,28 @@ brew "n"
 brew "neovim"
 # Pretty, minimal and fast ZSH prompt
 brew "pure"
+# Library for command-line editing
+brew "readline"
+# Python version management
+brew "pyenv"
+# Pyenv plugin to manage virtualenv
+brew "pyenv-virtualenv"
+# Command-line interface for SQLite
+brew "sqlite"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
+# Tool Command Language
+brew "tcl-tk"
 # Terminal multiplexer
 brew "tmux"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# General-purpose lossless data-compression library
+brew "zlib"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Sound and music editor

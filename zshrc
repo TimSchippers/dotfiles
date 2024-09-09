@@ -38,6 +38,17 @@ alias trail='<<<${(F)path}'
 
 
 
+
+# go exports
+
+export GOPRIVATE="github.com/TimSchippers/*"
+
+# Python exports
+ export PYENV_ROOT="$HOME/.pyenv"
+ eval "$(pyenv init -)"
+ eval "$(pyenv virtualenv-init -)"
+export CONFIGURE_OPTS="--with-openssl=$(brew --prefix openssl)"
+
 # Add locations to $path Array (this forces unique $PATH Locations)
 
 typeset -U path
@@ -47,11 +58,9 @@ path=(
 $path
 "$HOME/.dotfiles/scripts"
 "$HOME/go/bin"
+ "$PYENV_ROOT/shims:$PATH"
+ "$PYENV_ROOT/bin:$PATH"
 )
-
-# go exports
-
-export GOPRIVATE="github.com/TimSchippers/*"
 # Sourcing
 
 source "$HOME/.dotfiles/secrets"
