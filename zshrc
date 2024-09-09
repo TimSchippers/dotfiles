@@ -21,7 +21,7 @@ setopt HIST_IGNORE_SPACE  # Don't save when prefixed with space
 setopt HIST_IGNORE_DUPS   # Don't save duplicate lines
 
 # Aliases
-alias n=nvim
+alias v=nvim
 alias ls='ls -lAFh --color=auto'
 
 alias gp='git pull'
