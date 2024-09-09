@@ -9,6 +9,7 @@ return {
 				light = "latte",
 				dark = "mocha",
 			},
+      -- override colors to have a gruvbox-ish feel
 			color_overrides = {
 				latte = {
 					rosewater = "#c14a4a",
