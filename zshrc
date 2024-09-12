@@ -58,6 +58,7 @@ path=(
 $path
 "$HOME/.dotfiles/scripts"
 "$HOME/go/bin"
+"$HOME/zig"
  "$PYENV_ROOT/shims:$PATH"
  "$PYENV_ROOT/bin:$PATH"
 )
