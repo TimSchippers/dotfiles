@@ -21,6 +21,7 @@ config.window_padding = {
 config.hide_tab_bar_if_only_one_tab = true
 
 
+config.audible_bell = "Disabled"
 
 -- disable making tabs because i always use tmux
 config.keys = {
