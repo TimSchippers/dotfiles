@@ -64,9 +64,11 @@ cask "arc"
 cask "arturia-software-center"
 # Desktop password and login vault
 cask "bitwarden"
+# Flexible space to create your own interactive software
+cask "cycling74-max"
 # Voice and text chat software
 cask "discord"
-cask "font-mononoki"
+cask "font-mononoki-nerd-font"
 # Keyboard customiser
 cask "karabiner-elements"
 # Tool to prevent the system from going into sleep mode
