@@ -9,7 +9,7 @@ local config = wezterm.config_builder()
 -- appearance config
 config.color_scheme = "Gruvbox Material (Gogh)"
 
-config.font = wezterm.font("mononoki")
+config.font = wezterm.font("Mononoki Nerd Font Mono")
 
 config.window_decorations = "RESIZE"
 config.window_padding = {
