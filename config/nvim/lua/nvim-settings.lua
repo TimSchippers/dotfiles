@@ -22,6 +22,8 @@ vim.opt.shiftwidth = 2
 -- Set minimum line distance to border
 vim.opt.scrolloff = 8
 
+vim.opt.wrap = false
+
 -- Set spellcheck language to english and dutch
 vim.opt.spelllang = { "en_gb", "nl" }
 

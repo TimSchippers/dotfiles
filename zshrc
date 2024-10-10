@@ -22,6 +22,7 @@ setopt HIST_IGNORE_DUPS   # Don't save duplicate lines
 
 # Aliases
 alias v=nvim
+alias v.='nvim .'
 alias ls='ls -lAFh --color=auto'
 
 alias gp='git pull'

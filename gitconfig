@@ -1,3 +1,5 @@
 [user]
 	name = Tim Schippers\n
 	email = 144120458+TimSchippers@users.noreply.github.com
+[alias]
+	tree = log --oneline --graph --decorate --all
