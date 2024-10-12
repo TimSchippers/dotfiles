@@ -29,10 +29,10 @@ alias gp='git pull'
 alias gs='git status'
 alias lg='lazygit'
 
-alias dot="cd $HOME/.dotfiles"
+alias dot='cd $HOME/.dotfiles'
+alias sb='cd ~/bujo'
 
 alias code="zed"
-
 
 ## shows the paths in a more clear way
 alias trail='<<<${(F)path}'
