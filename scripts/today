@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+# Script for opening my daily log
+
+# file="$HOME"'/dibujo/journals/'$(date +"%Y_%m_%d").md
+file='/Users/tim/bujo/calendar/'$(date +"%Y%m%d").md
+
+# go to the directory
+cd /Users/tim/bujo/
+
+# open daily log in nvim
+nvim "$file"
+
+
