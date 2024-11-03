@@ -222,3 +222,7 @@ run = 'move-node-to-workspace M'
 [[on-window-detected]]
 if.app-id = 'com.readdle.SparkDesktop'
 run = 'move-node-to-workspace S' 
+
+[[on-window-detected]]
+if.app-id = 'co.noteplan.NotePlan-setapp'
+run = 'move-node-to-workspace N' 
