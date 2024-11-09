@@ -1,0 +1,77 @@
+#!/usr/bin/env zsh
+# script for making a weekly log with time tracking summary
+
+thisWeek='/Users/tim/bujo/calendar/'$(date +"%Y-W%W").md
+nextWeek='/Users/tim/bujo/calendar/'$(date +"%Y-W")$(($(date "+%W")+1)).md
+
+# go to the journal directory
+cd /Users/tim/bujo/
+
+# function for a new weekly log
+newNote() {
+  if [[ ! -f "$1" ]]; then
+
+    touch "$1"
+    # Get the week number based on the file name
+    weekNr=$(echo "$(basename "$1")" | sed 's/.*-W//')
+    weekNr=$(echo "$weekNr" | tr '.md' '\n')
+
+    cat <<EOF >"$1"
+# Week $weekNr
+## Intentions/Plan
+
+## Summary
+
+## Time Log
+
+## Extra Notes
+
+EOF
+  fi
+}
+
+# function for output and format the logs from this week
+timeLog() {
+  # Get the current day of the week (1-7, where 1 is Monday)
+  current_day=$(date +%u)
+
+  # File to store the last execution date
+  last_exec_file="/Users/tim/.dotfiles/scripts/tmpFiles/lastExecWeekScript.txt"
+  # Get the last execution date from the file (if it exists)
+  if [ -f "$last_exec_file" ]; then
+    last_exec_date=$(cat "$last_exec_file")
+  else
+    # If the file doesn't exist, set a date on a weekday in the past so it always runs the first time
+    last_exec_date="2024-11-08"
+  fi
+  # Get the last execution day
+  last_exec_day=$(date -j -f "%Y-%m-%d" "$last_exec_date" +%u)
+
+  # Check if it's the weekend and if the script wasn't executed this weekend
+  if [[ $current_day -eq 6 || $current_day -eq 7 ]] && [[ $last_exec_day -ne 6 && $last_exec_day -ne 7 ]]; then
+    # It's the weekend and the script wasn't executed yet this weekend
+    # gives the total hours per project
+    watsonReport=$(watson report )
+    watsonReport=$(echo "$watsonReport" | tr '\n' '§') # Replace newlines with a unique placeholder
+    # gives the daily logs
+    watsonLog=$(watson log -R)
+    watsonLog=$(echo "$watsonLog" | tr '\n' '§') # Replace newlines with a unique placeholder
+    # format the summary
+    timeLogText="\n$watsonReport\n---\n$watsonLog"
+    timeLogText=$(echo "$timeLogText" | tr '\n' '§') # Replace newlines with a unique placeholder
+    # Use sed to insert the Log after the '# Time Log' header
+    sed -i "" "/^## Time Log/a\ 
+$timeLogText " "$thisWeek"
+          # Update the last execution date
+          date +%Y-%m-%d > "$last_exec_file"
+          # Revert the placeholders back to newlines in the file
+          sed -i "" "s/§/\\n/g" "$thisWeek"
+        else
+          # It's a weekday or the script was already executed this weekend.
+  fi
+}
+
+newNote "$thisWeek"
+newNote "$nextWeek"
+timeLog
+nvim -O "$thisWeek" "$nextWeek"

@@ -4,3 +4,5 @@ lazy-lock.json
 lazyvim.json
 secrets
 config/raycast/extensions/
+config/karabiner/automatic_backups/
+scripts/tmpFiles
