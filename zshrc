@@ -67,6 +67,11 @@ $path
 
 source "$HOME/.dotfiles/secrets"
 
+# zsh
+  source <(fzf --zsh)
+
+
+
 # always open tmux
 if [ -z $TMUX ]; then; tmux new-session -A -s Home; fi
 
