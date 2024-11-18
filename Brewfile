@@ -6,12 +6,18 @@ brew "openssl@3"
 brew "bat"
 # Secure and free password manager for all of your devices
 brew "bitwarden-cli"
+# Library for command-line editing
+brew "readline"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Cross-platform make
 brew "cmake"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Lightweight and flexible command-line JSON processor
@@ -28,18 +34,16 @@ brew "mas"
 brew "n"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Ncurses based sudoku game
+brew "nudoku"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Pretty, minimal and fast ZSH prompt
 brew "pure"
-# Library for command-line editing
-brew "readline"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Command-line interface for SQLite
-brew "sqlite"
-# General-purpose data compression with high compression ratio
-brew "xz"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Command-line interface for https://speedtest.net bandwidth tests
@@ -48,6 +52,8 @@ brew "speedtest-cli"
 brew "tcl-tk"
 # Terminal multiplexer
 brew "tmux"
+# Command-line tool to track (your) time
+brew "watson"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # General-purpose lossless data-compression library
@@ -87,8 +93,14 @@ cask "setapp"
 cask "soundtoys"
 # Download manager for Spitfire audio libraries
 cask "spitfire-audio"
+# Video game digital distribution service
+cask "steam"
+# Unpacks archive files
+cask "the-unarchiver"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
 # Multiplayer code editor
 cask "zed"
+# Open-source markdown editor
+cask "zettlr"
 mas "Xcode", id: 497799835
