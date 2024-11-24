@@ -35,6 +35,9 @@ timeLog() {
   # Get the current day of the week (1-7, where 1 is Monday)
   current_day=$(date +%u)
 
+  # Get the current week number
+  current_week=$(date +%V)
+
   # File to store the last execution date
   last_exec_file="/Users/tim/.dotfiles/scripts/tmpFiles/lastExecWeekScript.txt"
   # Get the last execution date from the file (if it exists)
@@ -47,8 +50,11 @@ timeLog() {
   # Get the last execution day
   last_exec_day=$(date -j -f "%Y-%m-%d" "$last_exec_date" +%u)
 
-  # Check if it's the weekend and if the script wasn't executed this weekend
-  if [[ $current_day -eq 6 || $current_day -eq 7 ]] && [[ $last_exec_day -ne 6 && $last_exec_day -ne 7 ]]; then
+  # Get the week number of the last execution date
+  last_exec_week=$(date -j -f "%Y-%m-%d" "$last_exec_date" +%V)
+
+# Check if today is a weekend (Saturday or Sunday) and if the last execution date was not within this weekend
+if [[ ($current_day -eq 6 || $current_day -eq 7) && $last_exec_week != $current_week ]]; then
     # It's the weekend and the script wasn't executed yet this weekend
     # gives the total hours per project
     watsonReport=$(watson report )
