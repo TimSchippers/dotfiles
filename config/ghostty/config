@@ -1,0 +1,3 @@
+font-family = "Monaco"
+theme = "gruvbox-material"
+macos-titlebar-style = hidden
