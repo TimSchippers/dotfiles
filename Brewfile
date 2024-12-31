@@ -48,8 +48,12 @@ brew "pyenv-virtualenv"
 brew "ripgrep"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
+# Command-line Kanban board/task manager with support for Trello
+brew "taskell"
 # Tool Command Language
 brew "tcl-tk"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
 # Terminal multiplexer
 brew "tmux"
 # Command-line tool to track (your) time
@@ -75,12 +79,16 @@ cask "cycling74-max"
 # Voice and text chat software
 cask "discord"
 cask "font-mononoki-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Keyboard customiser
 cask "karabiner-elements"
 # Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
 # Administration tool for Native Instruments products
 cask "native-access"
+# Get up and running with large language models locally
+cask "ollama"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Email client
@@ -97,8 +105,6 @@ cask "spitfire-audio"
 cask "steam"
 # Unpacks archive files
 cask "the-unarchiver"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
 # Multiplayer code editor
 cask "zed"
 # Open-source markdown editor
