@@ -20,6 +20,8 @@ brew "git"
 brew "gnu-sed"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Get events and tasks from the macOS calendar database
+brew "ical-buddy"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
@@ -38,6 +40,8 @@ brew "neovim"
 brew "nudoku"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Send emails from your terminal
+brew "pop"
 # Pretty, minimal and fast ZSH prompt
 brew "pure"
 # Python version management
@@ -87,8 +91,6 @@ cask "karabiner-elements"
 cask "keepingyouawake"
 # Administration tool for Native Instruments products
 cask "native-access"
-# Get up and running with large language models locally
-cask "ollama"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Email client
@@ -107,6 +109,8 @@ cask "steam"
 cask "the-unarchiver"
 # Multiplayer code editor
 cask "zed"
+# Gecko based web browser
+cask "zen-browser"
 # Open-source markdown editor
 cask "zettlr"
 mas "Xcode", id: 497799835
