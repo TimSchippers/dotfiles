@@ -9,6 +9,7 @@
                 "rules": [
                     {
                         "description": "Space → Hyper Key (⌃⌥⇧⌘) | Space if alone",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": { "key_code": "spacebar" },
